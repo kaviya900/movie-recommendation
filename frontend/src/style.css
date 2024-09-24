@@ -1,0 +1,130 @@
+.login-page {
+  background: url('loginimage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  color: rgba(0, 0, 0, 0.943);
+}
+
+.form-wrapper {
+  background: rgba(64, 63, 63, 0.566); /* Slightly opaque white background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(255, 246, 246, 0.879);
+  width: 300px; /* Adjust width as needed */
+  text-align: center; /* Center text inside the form */
+  position: relative; /* Ensure it's positioned relative to container */
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Input field styling */
+.input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.button {
+  padding: 12px 20px; /* Adjust padding for a larger button */
+  background: linear-gradient(135deg, #28a745, #218838); /* Gradient background from light green to dark green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size for readability */
+  transition: background 0.3s, transform 0.3s; /* Smooth transition effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+}
+.button:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+.button:active {
+  background: linear-gradient(135deg, #1e7e34, #1c7430); /* Even darker gradient on active */
+  transform: scale(1); /* Reset size on click */
+}
+.error {
+  color: white; /* White text color */
+  background-color: red; /* Red background color */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.toggle-mode {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.btn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003d7a); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn:active {
+  background: linear-gradient(135deg, #003d7a, #002e5d); /* Even darker gradient on active */
+  transform: scale(1); /* Reset size on click */
+}
+.glowing-text {
+  font-size: 36px; /* Adjust font size as needed */
+  color: #000000; /* White color for the text */
+  text-shadow: 
+    0 0 5px #de1010, 
+    0 0 10px #f00d0d, 
+    0 0 15px #ff4500, /* Orange-red glow */
+    0 0 20px #ff4500, 
+    0 0 25px #ff4500, 
+    0 0 30px #ff4500, 
+    0 0 35px #ff4500;
+  animation: glowing 1.5s infinite; /* Add animation */
+}
+
+/* Keyframes for glowing effect */
+@keyframes glowing {
+  0% { text-shadow: 
+        0 0 5px #e21010, 
+        0 0 10px #eb2323, 
+        0 0 15px #ff4500, 
+        0 0 20px #ff4500, 
+        0 0 25px #ff4500, 
+        0 0 30px #ff4500, 
+        0 0 35px #ff4500; }
+  50% { text-shadow: 
+        0 0 10px #ef0b0b, 
+        0 0 20px #ef0b0b, 
+        0 0 30px #ff4500, 
+        0 0 40px #ff4500, 
+        0 0 50px #ff4500, 
+        0 0 60px #ff4500, 
+        0 0 70px #ff4500; }
+  100% { text-shadow: 
+         0 0 5px #ef0b0b,
+         0 0 10px #ef0b0b, 
+         0 0 15px #ff4500, 
+         0 0 20px #ff4500, 
+         0 0 25px #ff4500, 
+         0 0 30px #ff4500, 
+         0 0 35px #ff4500; }
+}

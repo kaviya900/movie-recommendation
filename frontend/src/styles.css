@@ -1,0 +1,302 @@
+.glowing-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+  color: #fff; /* Text color */
+  text-align: center;
+  margin: 0;
+}
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%); 
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+  .glowing-text.movie-title {
+    padding-top: 0;
+    margin-top: -150px; 
+    font-size: 2.5rem; 
+    color: rgb(253, 252, 252);
+    animation: moveLeftToRight 10s infinite linear; 
+    text-shadow: 0 0 10px rgba(231, 50, 13, 0.8), 0 0 20px rgba(242, 23, 23, 0.878), 0 0 50px rgba(235, 18, 18, 0.924); /* Glowing effect */
+  }
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-10px); /* Start slightly above */
+  }
+  50% {
+    transform: translateY(10px); /* Move down */
+  }
+  100% {
+    transform: translateY(-10px); /* Move back up */
+  }
+}
+.glowing-text.subtitle {
+  margin:20%;
+  font-size: 2rem; 
+  animation: moveUpDown 2s infinite ease-in-out; /* Duration and repetition */
+  text-shadow: 0 0 9px rgba(54, 215, 233, 0.887), 0 0 10px rgba(129, 227, 238, 0.887); /* Glowing effect */
+}
+.second-page-body {
+  position: fixed;
+  height: 100vh;
+  width: 100vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+  .second-page-background-blur {
+    position: fixe;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('moviebg.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    filter: blur(1.5px); 
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  .second-page-content {
+    position: fixed;
+    z-index: 1; 
+    color: #fff; 
+    border: 2px solid #f90000; 
+    padding: 50px 125px; 
+    border-radius: 8px; 
+    background: rgba(0, 0, 0, 0.7); 
+  }
+  .second-page-h1{
+    animation: heading-slide 5s infinite alternate;
+  }
+    @keyframes heading-slide {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+  .pick-movie-heading {
+    margin-top: 50px;
+    color: #e2480b; 
+    border: 2px solid rgb(255, 255, 255); 
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px #ffffff; 
+    animation: second-page-slide-in 5s forwards;
+  }
+  .second-page-form {
+    margin-top: 20px;
+  }
+  
+  .second-page-label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .second-page-select,
+  .second-page-button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .second-page-button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  .second-page-button:hover {
+    background-color: #45a049;
+  }
+  .go-to-third-page-button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+  }
+  .go-to-third-page-button:hover {
+    background-color: #0056b3; 
+  }
+  .back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .mood-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .mood-button:hover {
+    background-color: #0056b3;
+  }
+  .arrow,
+  .reverse-arrow {
+    background-color: #17d621;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 20px ;
+    text-align: center;
+    padding: 3px 5px;
+    border: 2px solid #17d621; 
+    border-radius: 3px;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 0%;
+  }
+  .arrow:hover,
+  .reverse-arrow:hover {
+    transform: scale(1.1);
+    background-color: #0d45de; 
+  }
+  .movie-display {
+    margin-top: 20px;
+  }
+  .movie-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  .movie-display {
+    margin-top: 20px;
+  }
+  .movie-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #c81919;
+    border-radius: 5px;
+  }
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  .mood-selection {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .genre-option:hover,
+  .mood-option:hover {
+    transform: scale(1.2); 
+    background-color: #f9f7f783;
+  }
+  .mood-selection {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .mood-option {
+    font-size: 50px; 
+    cursor: pointer; 
+    margin: 0 20px; 
+    padding: 10px; 
+    border: 3px solid #000; 
+    border-radius: 50%; 
+    transition: border 0.3s, transform 0.3s, background-color 0.3s; 
+  }
+  .genre-option.selected,
+  .mood-option.selected,
+  .company-option.selected {
+    border-color: #ff4500;
+    background-color: #1c51e4b5;
+  }
+
+  .genre-selection {
+    justify-content: center;
+  margin-top: 20px;
+  
+  }
+  .genre-option,
+  .company-option {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ed0404; 
+    border-radius: 5px;
+    transition: border 0.3s, background-color 0.3s, transform 0.3s;
+  }
+.company-selection {
+  justify-content: center;
+  margin-top: 20px;
+}
+.company-option.selected {
+  font-weight: bold;
+  }
+  .company-option:hover {
+    transform: scale(1.2); /* Enlarge the option on hover */
+    background-color: #f9f7f783; /* Add a background color on hover */
+    border-color: #ff4500; /* Change border color on hover */
+  }
+ /* Define the animation for the falling paper effect */
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.paper {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background-color: #f61313;
+  border-radius: 2px;
+  opacity: 0.8;
+  animation: fall 3s ease-out infinite;
+  pointer-events: none;
+}
+
+.paper-1 {
+  background-color: #ec1515;
+}
+
+.paper-2 {
+  background-color: #15de4a;
+}
+
+.paper-3 {
+  background-color: #d0d0d0;
+}
+
+  
+

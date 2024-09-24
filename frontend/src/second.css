@@ -1,0 +1,68 @@
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Style for the navigation bar */
+.navbar {
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.navbar a, .nav-button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  margin-top: 5px;
+  padding-left: 20px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.nav-button:hover + .submenu {
+  display: flex;
+}
+
+.submenu a {
+  padding: 5px 0;
+  color: white;
+  text-decoration: none;
+}

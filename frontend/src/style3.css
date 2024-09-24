@@ -1,0 +1,168 @@
+
+.background-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('seco.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1; /* Ensure it stays behind the content */
+}
+.container {
+  position: absolute;
+  right: 20px; 
+  top: 50%; /* Vertically center the content */
+  transform: translateY(-50%); 
+  text-align: center;
+  width: 40%;
+  height:100%; /* Adjust the width as necessary */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in-out; 
+}
+
+.container-expanded {
+  width: 60%; /* Expand width after search */
+  height: auto;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #333333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease-in;
+  font-family: 'Courier New', Courier, monospace; /* Change font style */
+  letter-spacing: 2px; /* Add spacing between letters */
+}
+
+.search-bar {
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  width: 70%;
+  background-color: #f0f8ff; /* Light blue background */
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  background-color: #e6f2ff; /* Change color on focus */
+  border-color: #0056b3;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: pulse 1s infinite; /* Pulse animation */
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+.go-back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  position: fixed; 
+  right:1px;
+}
+
+
+.go-back-button:hover {
+  background-color: #0056b3;
+}
+
+
+.go-back-button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: #fafafa;
+
+  font-weight: bold;
+  margin: 10px 0;
+  animation: shake 0.5s ease-in-out;
+  
+}
+
+.movie-details {
+  margin-top: 30px 30px 30px;
+  background: linear-gradient(135deg, #73eef9f6, #6937de); /* Linear gradient background */
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(151, 49, 49, 0.2); /* Shadow around details section */
+  animation: slideIn 1s ease-out; /* Slide-in effect */
+  height:100%;
+  position:fixed;
+  
+}
+
+.movie-title {
+  font-size: 2em;
+  color: #f40707;
+  margin-bottom: 10px;
+}
+
+.movie-poster {
+  height: auto;
+  border: 4px solid #f51515;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
+  width:auto;
+  height: auto;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
